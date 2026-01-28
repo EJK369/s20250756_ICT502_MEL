@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #fefefe;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0d3b66;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-text {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #f95738;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.destinations-grid, .services-grid, .team-grid {
+  display: grid;
+  gap: 20px;
+  padding: 40px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.destination-card, .service-card, .team-member {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.destination-card:hover, .service-card:hover, .team-member:hover {
+  transform: translateY(-10px);
+}
+
+.scroll-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.scroll-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media(max-width:768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
